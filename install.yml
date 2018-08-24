@@ -1,0 +1,25 @@
+---
+- clean: ['~', '~/.config']
+
+- defaults:
+    link:
+      relink: true
+      create: true
+
+- link:
+    ~/.bash/:
+      glob: true
+      path: bash/*
+    ~/.bash_profile:
+    ~/.bashrc:
+    ~/.config/:
+      glob: true
+      path: config/*/*
+    ~/.inputrc:
+    ~/.shell/:
+      glob: true
+      path: shell/*
+
+- shell:
+  - defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string '~/.dotfiles/iterm2'
+  - defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
