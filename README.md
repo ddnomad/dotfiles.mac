@@ -10,6 +10,9 @@ TODO
   that)
 * Add skeleton.vim plugin and templates folder
 * Integrate tmux into iTerm2
+* `GOPATH` is specified in `bash/settings.bash` but the folder itself is not
+  created during install which would break stuff on a fresh machine. Fix is
+  needed.
 
 
 Acknowledgements
