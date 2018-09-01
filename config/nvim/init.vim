@@ -69,6 +69,7 @@ map <F5> :IndentGuidesToggle<CR>
 " Neomake
 autocmd! BufWritePost,BufEnter * Neomake
 let g:neomake_python_enabled_makers= ['python', 'pylama', 'flake8', 'pyflakes', 'pycodestyle', 'pydocstyle', 'pylint']
+let g:neomake_go_enabled_makers= ['go', 'gometalinter', 'golint']
 
 " Markdown
 let g:markdown_enable_conceal=1
