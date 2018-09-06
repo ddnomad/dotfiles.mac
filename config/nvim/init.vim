@@ -55,7 +55,10 @@ set termguicolors  " TODO:
 " Default indentation
 :set tabstop=4
 :set shiftwidth=4
-:set expandtab  " TODO: Make sense of this option
+:set expandtab
+
+" Go specific indentation
+autocmd Filetype go setlocal noexpandtab
 
 " Show soft linebreaks
 set showbreak=↳\ \ \ 
