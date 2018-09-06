@@ -1,8 +1,8 @@
 dotfiles.mac
 ============
 This is my WIP configuration for my MacOS machine. Untidy mess it is, I'll
-probably will update it quite often. At some point in the future (really
-distant future) some cleanup will be done.
+probably update it quite often. At some point in the future (really distant
+future) some cleanup will be done.
 
 TODO
 ----
