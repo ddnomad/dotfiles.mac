@@ -42,7 +42,7 @@ set number relativenumber
 set guicursor=  " TODO: Make sense of this option
 set modeline  " TODO: Make sense  of this option
 set encoding=utf8
-set list listchars=tab:>\ ,trail:-,eol:$
+set list listchars=tab:▸\ ,trail:·,eol:¬
 set clipboard=unnamed
 set nocompatible
 filetype plugin indent on  " TODO: Make sense of this option
