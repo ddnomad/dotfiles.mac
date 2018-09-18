@@ -10,3 +10,5 @@ alias less='less -r'
 
 alias pip='pip3'
 alias python='python3'
+
+alias docprune='docker system prune -a'
