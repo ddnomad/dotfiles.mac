@@ -69,6 +69,9 @@ map <F3> :set spell!<CR>
 map <F4> :noh<CR>
 map <F5> :IndentGuidesToggle<CR>
 
+" Airline
+let g:airline_section_c= '%<%F%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
+
 " Neomake
 autocmd! BufWritePost,BufEnter * Neomake
 let g:neomake_python_enabled_makers= ['python', 'pylama', 'flake8', 'pyflakes', 'pycodestyle', 'pydocstyle', 'pylint']

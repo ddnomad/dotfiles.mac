@@ -16,4 +16,4 @@ export VISUAL=nvim
 # XXX: Is it a good place to keep this conf in?
 export GOPATH="/Users/${USER}/.golang"
 export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+PATH=$PATH:$GOROOT/bin:$GOPATH/bin:/Users/${USER}/Library/Python/3.7/bin
