@@ -21,3 +21,9 @@ This repository was heavily inspired by dotfiles of other folks out there.
 Here is [hopefully] complete list of repositories that I borrowed from:
 
 * https://github.com/stuarthicks/dotfiles
+
+Gotchas
+-------
+* Need to install GNU utils otherwise aliases will be broken
+* Update damn bash to the latest version. You are not keen on freaking out
+screaming "why the fucking vi mode is not displayed".

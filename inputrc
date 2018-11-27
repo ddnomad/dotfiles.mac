@@ -3,8 +3,8 @@ set editing-mode vi
 $if mode=vi
   set keymap vi-insert
   set show-mode-in-prompt on
-  set vi-ins-mode-string \1\e[90m\2+\1\e[0m\2
-  set vi-cmd-mode-string \1\e[90m\2:\1\e[0m\2
+  set vi-ins-mode-string +
+  set vi-cmd-mode-string :
   Control-l:clear-screen
 $endif
 
