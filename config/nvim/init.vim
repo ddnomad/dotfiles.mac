@@ -28,6 +28,7 @@ if dein#load_state(g:dein_plugin_dir)
   call dein#add('scrooloose/nerdtree')
   call dein#add('kien/ctrlp.vim')
   call dein#add('nathanaelkane/vim-indent-guides')
+  call dein#add('PProvost/vim-ps1')
 
   call dein#end()
   call dein#save_state()
