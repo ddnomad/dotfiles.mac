@@ -2,6 +2,8 @@ alias ls='gls --color=auto --hide="*.pyc"'
 alias l='gls --color=auto'
 alias la='gls -la --color=auto'
 
+alias ln='gln'
+
 alias top='htop'
 alias vim='nvim'
 alias pgp='gpg'

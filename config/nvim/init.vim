@@ -15,6 +15,7 @@ if dein#load_state(g:dein_plugin_dir)
   call dein#begin(g:dein_plugin_dir)
   call dein#add(g:dein_dir)
 
+  call dein#add('chr4/nginx.vim')
   call dein#add('chriskempson/base16-vim')
   call dein#add('neomake/neomake')
   call dein#add('ddnomad/dockerfile.vim')
