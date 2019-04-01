@@ -3,6 +3,7 @@ alias l='gls --color=auto'
 alias la='gls -la --color=auto'
 
 alias ln='gln'
+alias echo='gecho'
 
 alias top='htop'
 alias vim='nvim'
