@@ -77,6 +77,8 @@ let g:airline_section_c= '%<%F%m %#__accent_red#%{airline#util#wrap(airline#part
 " Neomake
 autocmd! BufWritePost,BufEnter * Neomake
 let g:neomake_python_enabled_makers= ['python', 'pylama', 'flake8', 'pyflakes', 'pycodestyle', 'pydocstyle', 'pylint']
+let g:neomake_python_python_exe = '/usr/local/bin/python3'
+
 let g:neomake_go_enabled_makers= ['go', 'gometalinter', 'golint']
 
 " Markdown
