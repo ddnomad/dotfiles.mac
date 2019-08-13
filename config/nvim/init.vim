@@ -80,6 +80,7 @@ let g:neomake_python_enabled_makers= ['python', 'pylama', 'flake8', 'pyflakes', 
 let g:neomake_python_python_exe = '/usr/local/bin/python3'
 
 let g:neomake_go_enabled_makers= ['go', 'gometalinter', 'golint']
+let g:neomake_javascript_enabled_makers= ['eslint', 'stylelint']
 
 " Markdown
 let g:markdown_enable_conceal=1
