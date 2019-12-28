@@ -11,3 +11,4 @@ source "${SOURCE_PREFIX}"/.shell/functions.sh
 source "${SOURCE_PREFIX}"/.shell/aliases.sh
 
 export PATH=/usr/local/sbin:$PATH
+. `which env_parallel.bash`

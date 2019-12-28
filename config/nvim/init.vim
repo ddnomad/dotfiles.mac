@@ -30,6 +30,7 @@ if dein#load_state(g:dein_plugin_dir)
   call dein#add('kien/ctrlp.vim')
   call dein#add('nathanaelkane/vim-indent-guides')
   call dein#add('PProvost/vim-ps1')
+  call dein#add('iamcco/markdown-preview.nvim', {'on_ft': ['markdown', 'pandoc.markdown', 'rmd'], 'build': 'cd app & yarn install'})
 
   call dein#end()
   call dein#save_state()
@@ -38,6 +39,9 @@ endif
 " Color scheme
 let base16colorspace=256
 colorscheme base16-default-dark
+
+" New stuff
+set cursorline
 
 " General usability
 set number relativenumber
@@ -76,11 +80,12 @@ let g:airline_section_c= '%<%F%m %#__accent_red#%{airline#util#wrap(airline#part
 
 " Neomake
 autocmd! BufWritePost,BufEnter * Neomake
-let g:neomake_python_enabled_makers= ['python', 'pylama', 'flake8', 'pyflakes', 'pycodestyle', 'pydocstyle', 'pylint']
+let g:neomake_python_enabled_makers= ['python', 'pylama', 'flake8', 'pycodestyle', 'pydocstyle', 'pylint']
 let g:neomake_python_python_exe = '/usr/local/bin/python3'
 
 let g:neomake_go_enabled_makers= ['go', 'gometalinter', 'golint']
 let g:neomake_javascript_enabled_makers= ['eslint', 'stylelint']
+let g:neomake_typescript_enabled_makers= ['tsc', 'tslint', 'eslint']
 
 " Markdown
 let g:markdown_enable_conceal=1
