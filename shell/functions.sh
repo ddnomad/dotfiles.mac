@@ -14,7 +14,7 @@ depsearch() {
         echo 'different way of specifying dependencies are not currently'
         echo 'supported.'
 
-        return
+        return 1
     fi
 
     local dependency
@@ -28,4 +28,26 @@ depsearch() {
         grep -Hne "${dependency}" "${fname}" | \
             sed -ne 's@.*Development/\(.*\)@\1@p'
     done
+}
+
+
+jqless() {
+    if test "$#" -ne 1; then
+        echo 'Usage: jqless FILE'
+        echo
+        echo 'Pretty print input JSON file with jq and pass it to less'
+        echo 'command preserving colors.'
+
+        return 1
+    fi
+
+    local json_fpath
+    json_fpath="$1"
+
+    if ! test -f "${json_fpath}"; then
+        echo "Error: No such file: ${json_fpath}"
+        return 1
+    fi
+
+    jq --color-output < "${json_fpath}" | less -R
 }
