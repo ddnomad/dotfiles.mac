@@ -31,6 +31,7 @@ if dein#load_state(g:dein_plugin_dir)
   call dein#add('nathanaelkane/vim-indent-guides')
   call dein#add('PProvost/vim-ps1')
   call dein#add('iamcco/markdown-preview.nvim', {'on_ft': ['markdown', 'pandoc.markdown', 'rmd'], 'build': 'cd app & yarn install'})
+  call dein#add('RobRoseKnows/lark-vim')
 
   call dein#end()
   call dein#save_state()
@@ -91,6 +92,9 @@ let g:neomake_typescript_enabled_makers= ['tsc', 'tslint', 'eslint']
 let g:markdown_enable_conceal=1
 
 let g:airline_theme='base16'
+
+" Lark Parser highligting
+au BufRead,BufNewFile *.lark set filetype=antlr4
 
 " Templates (Skeletons)
 " TODO: https://github.com/pgilad/vim-skeletons -- integrate
