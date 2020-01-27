@@ -10,5 +10,5 @@ source "${SOURCE_PREFIX}"/.bash/settings.bash
 source "${SOURCE_PREFIX}"/.shell/functions.sh
 source "${SOURCE_PREFIX}"/.shell/aliases.sh
 
-export PATH=/usr/local/sbin:$PATH
+export PATH=/usr/local/sbin:"${HOME}"/.cargo/bin:${PATH}
 . `which env_parallel.bash`
