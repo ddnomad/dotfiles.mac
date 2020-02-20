@@ -32,6 +32,7 @@ if dein#load_state(g:dein_plugin_dir)
   call dein#add('PProvost/vim-ps1')
   call dein#add('iamcco/markdown-preview.nvim', {'on_ft': ['markdown', 'pandoc.markdown', 'rmd'], 'build': 'cd app & yarn install'})
   call dein#add('RobRoseKnows/lark-vim')
+  call dein#add('lepture/vim-jinja')
 
   call dein#end()
   call dein#save_state()
