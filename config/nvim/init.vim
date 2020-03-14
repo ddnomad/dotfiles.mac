@@ -45,6 +45,10 @@ colorscheme base16-default-dark
 " New stuff
 set cursorline
 
+" Stop folding shit ples
+set nofoldenable
+
+
 " General usability
 set number relativenumber
 set guicursor=  " TODO: Make sense of this option
@@ -88,6 +92,7 @@ let g:neomake_python_python_exe = '/usr/local/bin/python3'
 " This might not work as expected
 let g:neomake_rust_enabled_makers= ['cargo', 'rustc']
 
+let g:neomake_rst_enabled_makers= ['rstcheck']
 let g:neomake_go_enabled_makers= ['go', 'gometalinter', 'golint']
 let g:neomake_javascript_enabled_makers= ['eslint', 'stylelint']
 let g:neomake_typescript_enabled_makers= ['tsc', 'tslint', 'eslint']
