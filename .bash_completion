@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Define a source prefix
+readonly SOURCE_PREFIX="/Users/${USER}"
+
+for bash_comp_script in "${SOURCE_PREFIX}"/.bash/completions/*; do
+    # shellcheck disable=SC1090
+    test -f "${bash_comp_script}" && source "${bash_comp_script}"
+done
