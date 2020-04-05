@@ -1,0 +1,1 @@
+/Users/ddnomad/.dotfiles/config/nvim/init.vim
