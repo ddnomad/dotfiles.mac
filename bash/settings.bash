@@ -14,8 +14,9 @@ export VISUAL=nvim
 
 # Golang
 # XXX: Is it a good place to keep this conf in?
-export GOPATH="/Users/${USER}/.golang"
+export GOPATH="/Users/${USER}/Development/golang"
 export GOROOT=/usr/local/opt/go/libexec
+export GO111MODULE=on
 PATH=$PATH:$GOROOT/bin:$GOPATH/bin:/Users/${USER}/Library/Python/3.7/bin
 
 # Fix locale complains
