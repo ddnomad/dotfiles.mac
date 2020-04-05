@@ -129,7 +129,6 @@ let g:airline_symbols.maxlinenr = ''
 " IndentLine plugin settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-let g:indentLine_conceallevel = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Neomake plugin settings
