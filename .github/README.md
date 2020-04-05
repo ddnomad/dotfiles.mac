@@ -1,8 +1,8 @@
 macOS Dotfiles
 ==============
 This repository contains dd's personal dotfiles for
-[macOS](https://en.wikipedia.org/wiki/MacOS). This is already a 2nd version
-which was "backported" from my [Arch Linux](https://www.archlinux.org/)
+[macOS](https://en.wikipedia.org/wiki/MacOS). This is already V2 which was
+"backported" from my [Arch Linux](https://www.archlinux.org/)
 [dotfiles](https://github.com/ddnomad/dotfiles.arch). This version uses
 [YADM](https://github.com/TheLocehiliosan/yadm) for managing the files under
 [VCS](https://en.wikipedia.org/wiki/Version_control).

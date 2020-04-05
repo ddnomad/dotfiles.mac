@@ -100,7 +100,10 @@ set nomodeline
 autocmd Filetype go setlocal noexpandtab
 
 " Fix Lark Parser highligting
-au BufRead,BufNewFile *.lark set filetype=antlr4
+autocmd BufRead,BufNewFile *.lark set filetype=antlr4
+
+" Fix .conf files highlighting
+autocmd BufRead,BufNewFile *.conf set filetype=texmf
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Shortcut mappings
@@ -135,7 +138,7 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Neomake plugin settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd! BufWritePost,BufEnter * Neomake
+autocmd BufWritePost,BufEnter * Neomake
 
 let g:neomake_error_sign={'text': "\uf00d", 'texthl': 'NeomakeErrorSign'}
 let g:neomake_warning_sign ={'text': "\uf12a", 'texthl': 'NeomakeWarningSign'}
@@ -160,6 +163,6 @@ let g:neomake_typescript_enabled_makers= ['tsc', 'tslint', 'eslint']
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pencil plugin settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd! FileType markdown,md,mkd,text call pencil#init({'wrap': 'hard'})
+autocmd FileType markdown,md,mkd,text call pencil#init({'wrap': 'hard'})
 let g:airline_section_x = '%{PencilMode()}'
 let g:pencil#textwidth = 80
