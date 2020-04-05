@@ -37,9 +37,11 @@ if dein#load_state(g:dein_plugin_dir)
     call dein#add('jeffkreeftmeijer/vim-numbertoggle')
     call dein#add('lepture/vim-jinja')
     call dein#add('neomake/neomake')
+    call dein#add('reedes/vim-pencil')
     call dein#add('RobRoseKnows/lark-vim')
     call dein#add('ryanoasis/vim-devicons')
     call dein#add('scrooloose/nerdtree')
+    call dein#add('tpope/vim-markdown')
     call dein#add('vim-airline/vim-airline')
     call dein#add('vim-airline/vim-airline-themes')
     call dein#add('Yggdroot/indentLine')
@@ -106,7 +108,7 @@ au BufRead,BufNewFile *.lark set filetype=antlr4
 map <F2> :NERDTreeToggle<CR>
 map <F3> :set spell!<CR>
 map <F4> :noh<CR>
-map <F5> :IndentGuidesToggle<CR>
+map <F5> :MarkdownPreview<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Airline plugin settings
@@ -154,3 +156,10 @@ let g:neomake_python_enabled_makers=[
 let g:neomake_go_enabled_makers= ['go', 'gometalinter', 'golint']
 let g:neomake_javascript_enabled_makers= ['eslint', 'stylelint']
 let g:neomake_typescript_enabled_makers= ['tsc', 'tslint', 'eslint']
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Pencil plugin settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd! FileType markdown,md,mkd,text call pencil#init({'wrap': 'hard'})
+let g:airline_section_x = '%{PencilMode()}'
+let g:pencil#textwidth = 80
