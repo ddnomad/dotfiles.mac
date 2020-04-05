@@ -1,3 +1,6 @@
+# FIXME: This is broken on macOS so needs to be fixed/refactored
+# FIXME: Performance of finding a project name sucks because there are too
+# much projects on my machine. Need to rethink an approach (limit depth?).
 function dev {
     local helpmsg
     helpmsg="$(
@@ -60,6 +63,6 @@ function dev {
     fi
 
     local project_path
-    project_path="$(find "${dev_root}" -type d -name "${arg}" | head -n 1)"
+    project_path="$(gfind "${dev_root}" -type d -name "${arg}" | head -n 1)"
     cd "${project_path}" || return
 }
