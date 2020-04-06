@@ -18,3 +18,4 @@ alias python='python3'
 alias top='glances'
 
 alias vim='nvim'
+alias tmux='tmux -u'

@@ -144,6 +144,11 @@ key_bindings:
     mods: Control
     chars: "\x0c"
 
+  # Tmux bridge bindings
+  - key: T
+    mods: Command
+    chars: "\x00\x63"
+
   # Disabled bindings
   - key: F
     mods: Command|Control
