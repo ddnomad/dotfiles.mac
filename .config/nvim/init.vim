@@ -162,7 +162,7 @@ let g:neomake_javascript_enabled_makers= ['eslint', 'stylelint']
 let g:neomake_typescript_enabled_makers= ['tsc', 'tslint', 'eslint']
 
 " FIXME: For some reason adding 'clippy' as another maker does not work
-let g:neomake_rust_enabled_makers=['cargo', 'cargotest', 'rustc']
+let g:neomake_rust_enabled_makers=['cargo', 'cargotest']
 autocmd BufWritePost,BufEnter *.rs Neomake! clippy
 
 
