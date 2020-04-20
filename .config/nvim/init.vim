@@ -22,7 +22,8 @@ if dein#load_state(g:dein_plugin_dir)
     call dein#add('airblade/vim-gitgutter')
     call dein#add('chr4/nginx.vim')
     call dein#add('chriskempson/base16-vim')
-    call dein#add('ddnomad/dockerfile.vim')
+    call dein#add('ctrlpvim/ctrlp.vim')
+    call dein#add('dominikduda/vim_current_word')
     call dein#add('editorconfig/editorconfig-vim')
 
     call dein#add('iamcco/markdown-preview.nvim', {
@@ -34,13 +35,27 @@ if dein#load_state(g:dein_plugin_dir)
         \'build': 'cd app & yarn install'
     \})
 
+    call dein#add('haya14busa/is.vim')
+    call dein#add('honza/dockerfile.vim')
     call dein#add('jeffkreeftmeijer/vim-numbertoggle')
     call dein#add('lepture/vim-jinja')
+
+    call dein#add('ncm2/float-preview.nvim')
+    call dein#add('ncm2/ncm2')
+    call dein#add('ncm2/ncm2-bufword')
+    call dein#add('ncm2/ncm2-jedi')
+    call dein#add('ncm2/ncm2-path')
+    call dein#add('ncm2/ncm2-racer')
+    call dein#add('filipekiss/ncm2-look.vim')
+
     call dein#add('neomake/neomake')
-    call dein#add('reedes/vim-pencil')
+    call dein#add('neovim/nvim-lsp')
+    call dein#add('osyo-manga/vim-anzu')
     call dein#add('RobRoseKnows/lark-vim')
+    call dein#add('roxma/nvim-yarp')
     call dein#add('ryanoasis/vim-devicons')
     call dein#add('scrooloose/nerdtree')
+    call dein#add('tpope/vim-commentary')
     call dein#add('tpope/vim-markdown')
     call dein#add('vim-airline/vim-airline')
     call dein#add('vim-airline/vim-airline-themes')
@@ -131,14 +146,32 @@ let g:airline_symbols.linenr = '☰'
 let g:airline_symbols.maxlinenr = ''
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Float Preview plugin settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:float_preview#docked = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " IndentLine plugin settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" is.vim plugin settings (and integration with Anzu)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map n <Plug>(is-nohl)<Plug>(anzu-n-with-echo)
+map N <Plug>(is-nohl)<Plug>(anzu-N-with-echo)
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NCM2 plugin settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect
+let g:ncm2#total_popup_limit = 10
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Neomake plugin settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd BufWritePost,BufEnter * Neomake
+call neomake#configure#automake('nrwi', 100)
 
 let g:neomake_error_sign={'text': "\uf00d", 'texthl': 'NeomakeErrorSign'}
 let g:neomake_warning_sign ={'text': "\uf12a", 'texthl': 'NeomakeWarningSign'}
@@ -157,18 +190,11 @@ let g:neomake_python_enabled_makers=[
 \]
 
 let g:neomake_go_enabled_makers= ['go', 'gometalinter', 'golint']
-
 let g:neomake_javascript_enabled_makers= ['eslint', 'stylelint']
 let g:neomake_typescript_enabled_makers= ['tsc', 'tslint', 'eslint']
-
-" FIXME: For some reason adding 'clippy' as another maker does not work
 let g:neomake_rust_enabled_makers=['cargo', 'cargotest']
-autocmd BufWritePost,BufEnter *.rs Neomake! clippy
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Pencil plugin settings
+" vim_current_word plugin settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd FileType markdown,md,mkd,text call pencil#init({'wrap': 'hard'})
-let g:airline_section_x = '%{PencilMode()}'
-let g:pencil#textwidth = 80
+let g:vim_current_word#highlight_current_word = 0
