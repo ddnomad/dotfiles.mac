@@ -80,14 +80,14 @@ set termguicolors
 let base16colorspace=256
 colorscheme base16-default-dark
 
-" ALlow to copy/paste from the main clipboard buffer
+" Allow to copy/paste from the main clipboard buffer
 set clipboard=unnamed
 
 " Just a superior way to move around
 set number relativenumber
 set cursorline
 
-" Do not fold files by default
+" Do not fold anything by default
 set nofoldenable
 
 " Set display for non-printable characters
@@ -108,6 +108,9 @@ set guifont=
 " More info: https://security.stackexchange.com/a/157739/90606
 set nomodeline
 
+" Prevent vim jumping when linting marks appear/disappear in a sign column
+set signcolumn=yes
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Filetype specific fixes
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -127,6 +130,7 @@ map <F2> :NERDTreeToggle<CR>
 map <F3> :set spell!<CR>
 map <F4> :noh<CR>
 map <F5> :MarkdownPreview<CR>
+map <F6> :IndentLinesToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Airline plugin settings
@@ -168,6 +172,9 @@ autocmd BufEnter * call ncm2#enable_for_buffer()
 set completeopt=noinsert,menuone,noselect
 let g:ncm2#total_popup_limit = 10
 
+" Close completion popup and also start a new line when pressing Enter
+inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Neomake plugin settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -198,3 +205,4 @@ let g:neomake_rust_enabled_makers=['cargo', 'cargotest']
 " vim_current_word plugin settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:vim_current_word#highlight_current_word = 0
+hi CurrentWordTwins gui=italic
