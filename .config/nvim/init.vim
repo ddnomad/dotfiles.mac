@@ -186,10 +186,14 @@ let g:neomake_info_sign ={'text': "\uf129", 'texthl': 'NeomakeInfoSign'}
 let g:neomake_message_sign ={'text': "\uf129", 'texthl': 'NeomakeMessageSign'}
 
 let g:neomake_python_python_exe='/usr/local/bin/python3'
+let g:neomake_python_pylint_args = neomake#makers#ft#python#pylint().args + [
+    \'--load-plugins',
+    \'pylint_flask'
+\]
 let g:neomake_python_enabled_makers=[
     \'python',
-    \'pylama',
     \'flake8',
+    \'pylama',
     \'pyflakes',
     \'pycodestyle',
     \'pydocstyle',
