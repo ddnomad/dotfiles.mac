@@ -55,6 +55,7 @@ if dein#load_state(g:dein_plugin_dir)
     call dein#add('roxma/nvim-yarp')
     call dein#add('ryanoasis/vim-devicons')
     call dein#add('scrooloose/nerdtree')
+    call dein#add('tmhedberg/SimpylFold')
     call dein#add('tpope/vim-commentary')
     call dein#add('tpope/vim-markdown')
     call dein#add('vim-airline/vim-airline')
@@ -195,7 +196,6 @@ let g:neomake_python_enabled_makers=[
     \'flake8',
     \'pylama',
     \'pyflakes',
-    \'pycodestyle',
     \'pydocstyle',
     \'pylint'
 \]
@@ -204,6 +204,11 @@ let g:neomake_go_enabled_makers= ['go', 'gometalinter', 'golint']
 let g:neomake_javascript_enabled_makers= ['eslint', 'stylelint']
 let g:neomake_typescript_enabled_makers= ['tsc', 'tslint', 'eslint']
 let g:neomake_rust_enabled_makers=['cargo', 'cargotest']
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SimpylFold plugin settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:SimpylFold_fold_import = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim_current_word plugin settings

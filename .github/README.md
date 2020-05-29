@@ -26,3 +26,6 @@ Self Reminders
 - Added [ncm2](https://github.com/ncm2/ncm2) autocompletion and some
   completion providers. Currently it is annoying vvv much. Might be worth
   trying to get used to it.
+- Added [SimpylFold](https://github.com/tmhedberg/SimpylFold). Use `zc` to
+  fold all, `zi` to unfold all, `za` to toggle fold of a selected fold,
+  `zA` to toggle fold and all nested folds.
