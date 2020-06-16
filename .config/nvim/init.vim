@@ -116,7 +116,10 @@ set signcolumn=yes
 " Filetype specific fixes
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Do not expand tab in Golang files
-autocmd Filetype go setlocal noexpandtab
+autocmd FileType go setlocal noexpandtab
+
+" Disable indentLine for markdown files to prevent concealing of chars
+autocmd FileType markdown let b:indentLine_enabled=0
 
 " Fix Lark Parser highligting
 autocmd BufRead,BufNewFile *.lark set filetype=antlr4
@@ -181,6 +184,9 @@ inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call neomake#configure#automake('nrwi', 100)
 
+" Temporary fix for https://github.com/neomake/neomake/issues/1617
+let g:neomake_tempfile_dir = '~/.config/nvim/tmp'
+
 let g:neomake_error_sign={'text': "\uf00d", 'texthl': 'NeomakeErrorSign'}
 let g:neomake_warning_sign ={'text': "\uf12a", 'texthl': 'NeomakeWarningSign'}
 let g:neomake_info_sign ={'text': "\uf129", 'texthl': 'NeomakeInfoSign'}
@@ -195,7 +201,6 @@ let g:neomake_python_enabled_makers=[
     \'python',
     \'flake8',
     \'pylama',
-    \'pyflakes',
     \'pydocstyle',
     \'pylint'
 \]
