@@ -7,4 +7,8 @@ export VISUAL=nvim
 export DEV_ROOT=/Users/"${USER}"/Development
 
 # Add Rust tooling to a PATH
-export PATH="${HOME}/.cargo/bin:${PATH}"
+export PATH="${HOME}/.cargo/bin:/usr/local/sbin:${PATH}"
+
+# Explicitly set a correct locale
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8

@@ -49,7 +49,10 @@ if dein#load_state(g:dein_plugin_dir)
     call dein#add('filipekiss/ncm2-look.vim')
 
     call dein#add('neomake/neomake')
-    call dein#add('neovim/nvim-lsp')
+
+    " FIXME: The fuck is that and why do I need that?
+    "call dein#add('neovim/nvim-lsp')
+
     call dein#add('osyo-manga/vim-anzu')
     call dein#add('RobRoseKnows/lark-vim')
     call dein#add('roxma/nvim-yarp')

@@ -94,7 +94,7 @@ shell:
   args:
     - --login
     - -c
-    - tmux attach || tmux
+    - tmux attach || tmux -u
 
 live_config_reload: true
 
