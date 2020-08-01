@@ -94,7 +94,7 @@ shell:
   args:
     - --login
     - -c
-    - tmux attach || tmux -u
+    - tmux -u attach || tmux -u
 
 live_config_reload: true
 
@@ -143,16 +143,67 @@ key_bindings:
   # Tmux bridge bindings
   - key: J
     mods: Command
-    chars: "\x00\x6a"
+    chars: "\x01\x6a"
   - key: K
     mods: Command
-    chars: "\x00\x6b"
+    chars: "\x01\x6b"
   - key: H
     mods: Command
-    chars: "\x00\x68"
+    chars: "\x01\x68"
   - key: L
     mods: Command
-    chars: "\x00\x6c"
+    chars: "\x01\x6c"
+
+  - key: J
+    mods: Command|Shift
+    chars: "\x01\x4a"
+  - key: K
+    mods: Command|Shift
+    chars: "\x01\x4b"
+  - key: H
+    mods: Command|Shift
+    chars: "\x01\x48"
+  - key: L
+    mods: Command|Shift
+    chars: "\x01\x4c"
+
+  - key: Key0
+    mods: Command
+    chars: "\x01\x30"
+  - key: Key1
+    mods: Command
+    chars: "\x01\x31"
+  - key: Key2
+    mods: Command
+    chars: "\x01\x32"
+  - key: Key3
+    mods: Command
+    chars: "\x01\x33"
+  - key: Key4
+    mods: Command
+    chars: "\x01\x34"
+  - key: Key5
+    mods: Command
+    chars: "\x01\x35"
+  - key: Key6
+    mods: Command
+    chars: "\x01\x36"
+  - key: Key7
+    mods: Command
+    chars: "\x01\x37"
+  - key: Key8
+    mods: Command
+    chars: "\x01\x38"
+  - key: Key9
+    mods: Command
+    chars: "\x01\x39"
+
+  - key: T
+    mods: Command
+    chars: "\x01\x74"
+  - key: T
+    mods: Command|Shift
+    chars: "\x01\x54"
 
   # Disabled bindings
   - key: F
