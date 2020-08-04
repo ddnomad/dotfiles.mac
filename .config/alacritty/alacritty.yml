@@ -23,6 +23,8 @@ font:
   # Normal font face
   normal:
     family: Hack Nerd Font
+    # See: https://github.com/ddnomad/dotfiles.mac/issues/3
+    #family: FiraCode Nerd Font
 
   # Point size
   size: 14.0
