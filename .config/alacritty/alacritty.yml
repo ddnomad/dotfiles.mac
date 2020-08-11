@@ -79,7 +79,7 @@ colors:
     - index: 21
       color: '0xe8e8e8'
 
-visual_bell:
+bell:
   duration: 0
 
 selection:
