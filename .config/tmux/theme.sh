@@ -12,7 +12,8 @@ TMUX_POWERLINE_DEFAULT_RIGHTSIDE_SEPARATOR=${TMUX_POWERLINE_DEFAULT_RIGHTSIDE_SE
 if [ -z "${TMUX_POWERLINE_LEFT_STATUS_SEGMENTS}" ]; then
     TMUX_POWERLINE_LEFT_STATUS_SEGMENTS=(
         "hostname 4 0" \
-        "wan_ip 19 7" \
+        "wan_ip 19 7 ${TMUX_POWERLINE_SEPARATOR_RIGHT_THIN}" \
+        "ifstat_sys 19 7" \
         "pwd 18 7" \
     )
 fi
@@ -20,6 +21,7 @@ fi
 if [ -z "${TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS}" ]; then
     TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS=(
         "now_playing 18 20" \
+        "tmux_mem_cpu_load 19 7" \
         "date_day 9 0" \
         "date 9 0 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
         "time 9 0 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
