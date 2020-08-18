@@ -106,7 +106,7 @@ set cpo+=n
 
 " Use terminal cursor & fonts
 set guicursor=
-set guifont=
+"set guifont=
 
 " Explicitly disable modeline for security reasons
 " More info: https://security.stackexchange.com/a/157739/90606
@@ -122,7 +122,7 @@ set signcolumn=yes
 autocmd FileType go setlocal noexpandtab
 
 " Disable indentLine for markdown files to prevent concealing of chars
-autocmd FileType markdown let b:indentLine_enabled=0
+autocmd FileType json,markdown let b:indentLine_enabled=0
 
 " Fix Lark Parser highligting
 autocmd BufRead,BufNewFile *.lark set filetype=antlr4
