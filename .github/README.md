@@ -1,3 +1,5 @@
+> **DEPRECATION NOTE:** This repository was integrated in ddnomad/dotfiles monorepo
+
 macOS Dotfiles
 ==============
 This repository contains dd's personal dotfiles for
